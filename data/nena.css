@@ -64,8 +64,8 @@ header h1 {
 	
 	header div {
 		width:92%;
-		margin-left:3%;
-		margin-right:3%;
+		/*margin-left:3%;
+		margin-right:3%;*/
 		width:100%;
 	}
 	
@@ -95,7 +95,6 @@ header h1 {
 		font-size: 1.5em;
 		width:100%;
 	}
-	
 }
 
 
@@ -158,13 +157,14 @@ ol li, ul li {
 
 @media only screen and (max-width: 900px) {
 	.container section {
-		width:92%;
-		margin-left:3%;
-		margin-right:3%;
+		width:100%;
+		/*margin-left:3%;
+		margin-right:3%;*/
 	}
 	
 	.container section + section {
-		margin-left:3%;
+		/*margin-left:3%;*/
+		margin-left:0;
 		margin-top:3em;
 	}
 	
@@ -315,6 +315,11 @@ form table {
 	width:100%;
 }
 
+form table td:first-child {
+	vertical-align:top;
+	width:20%;
+}
+
 form table td {
 	padding-bottom:1vw;
 }
@@ -337,6 +342,15 @@ input[type=submit] {
 	border:0;
 	padding:.4em;
 	color:white;
+}
+
+input[type=radio], input[type=checkbox] {
+	display:inline-block;
+	margin-bottom:1em;
+	margin-right:1em;
+	margin-top:.2em;
+	vertical-align: top;
+	width:auto;
 }
 
 form label {
