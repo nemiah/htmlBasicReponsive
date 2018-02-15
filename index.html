@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 		
-        <title></title>
+        <title>♡ htmlBasicResponsive</title>
 		
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="data/main.css">
         <link rel="stylesheet" href="data/nena.css">
     </head>
+	
     <body>
 		<header class="bggrey">
 			<div>
@@ -33,7 +34,7 @@
 			<section>
 				<article>
 					<h2>Column 33%</h2>
-					 <p>Hello world! This is htmlBasicResponsive.</p>
+					 <p>Ordered list</p>
 					 <ol>
 						 <li>List example 1</li>
 						 <li>List example 2</li>
@@ -46,7 +47,7 @@
 			<section>
 				<article>
 					<h2>Column 33%</h2>
-					 <p>Hello world! This is htmlBasicResponsive.</p>
+					 <p>Unordered list:</p>
 					 <ul>
 						 <li>List example 1</li>
 						 <li>List example 2</li>
@@ -60,7 +61,7 @@
 			<section>
 				<article>
 					<h2>Column 33%</h2>
-					 <p>Hello world! This is htmlBasicResponsive.</p>
+					 <p>Link:</p>
 					 <p><a href="#">Link example</a></p>
 				</article>
 			</section>
@@ -70,7 +71,7 @@
 			<section>
 				<article>
 					<h2>Column 50%</h2>
-					 <p>Hello world! This is htmlBasicResponsive.</p>
+					 <p>Grey background form:</p>
 					 <form>
 						 <table>
 							 <tr>
@@ -132,7 +133,27 @@
 			<section>
 				<article>
 					<h2>Column 50%</h2>
-					 <p>Hello world! This is htmlBasicResponsive.</p>
+					 <p>Code:</p>
+					 <pre>
+public function checkData(){
+	$AK = $this->getUser();
+	$AK = new pPArbeitskraft($AK->getID());
+
+	$return = array();
+	foreach($this->requiredFields AS $field){
+		if($field == "pPArbeitskraftKinder")
+			continue;
+
+		if(trim($AK->A($field)) == "" OR trim($AK->A($field)) == "0")
+			$return[] = $field;
+	}
+
+	if($AK->A("pPArbeitskraftKinder") == "-1")
+		$return[] = "pPArbeitskraftKinder";
+
+	return $return;
+}
+					 </pre>
 				</article>
 			</section>
 		</div>
@@ -141,13 +162,27 @@
 			<section>
 				<article>
 					<h2>Double width column 67%</h2>
-					 <p>Hello world! This is htmlBasicResponsive.</p>
+					<p>Blockquote:</p>
+					<blockquote>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					</blockquote>
 			</section>
 
 			<section>
 				<article>
 					<h2>Single width column 33%</h2>
-					 <p>Hello world! This is htmlBasicResponsive.</p>
+					 <p>White background form:</p>
+					 <form>
+						 <table>
+							 <tr>
+								 <td><label>Input:</label></td>
+								 <td><input /></td>
+							 </tr>
+							 <tr>
+								 <td colspan="2"><input type="submit" /></td>
+							 </tr>
+						 </table>
+					</form>
 				</article>
 			</section>
 		</div>
@@ -156,7 +191,9 @@
 			<section class="bggrey">
 				<article>
 					<h2>Single centered column 50%</h2>
-					 <p>Hello world! This is htmlBasicResponsive.</p>
+					<p>Hello world! This is htmlBasicResponsive.</p>
+					<h3>Third level header</h3>
+					<p>Hello world! This is htmlBasicResponsive.</p>
 			</section>
 		</div>
 
